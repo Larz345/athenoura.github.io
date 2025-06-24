@@ -1,1 +1,130 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athenoura | Beauty Beyond Skin</title>
+  <style>
+    :root {
+      --midnight-bliss: linear-gradient(to right, #001f3f, #8a2be2);
+      --solar-radiance: linear-gradient(to right, #ff6a00, #ff1493);
+      --athena-original: linear-gradient(to right, #b9a2e2, #fff8f0);
+      --text-main: #fff;
+      --gold: #ffd700;
+    }body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--athena-original);
+  color: var(--text-main);
+  transition: background 0.5s ease;
+}
 
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+}
+
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.collection-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+}
+
+.collection-selector button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.product-section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.product-section h2 {
+  margin-bottom: 10px;
+}
+
+.preorder-button {
+  background-color: var(--gold);
+  color: #001f3f;
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 40px 10px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Athenoura</h1>
+    <p>Reveal Your Radiance. Define Your Aura.</p>
+  </header>  <nav>
+    <a href="#collections">Collections</a>
+    <a href="#store">Go to Store</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>  <div class="collection-selector">
+    <button onclick="switchTheme('athena-original')">Athena Premium</button>
+    <button onclick="switchTheme('midnight-bliss')">Midnight Bliss</button>
+    <button onclick="switchTheme('solar-radiance')">Solar Radiance</button>
+  </div>  <section class="product-section" id="collections">
+    <h2>Featured Collection</h2>
+    <p>Discover our limited-edition skincare treasures.</p>
+    <button class="preorder-button" onclick="alert('Pre-order confirmed. Your aura awaits.')">Pre-order Now</button>
+  </section>  <section id="about" class="product-section">
+    <h2>About Athenoura</h2>
+    <p>Athenoura is more than skincare — it's a movement. Infused with elegance, wisdom, and inclusivity, every product unlocks your glow and strengthens your story.</p>
+  </section>  <section id="contact" class="product-section">
+    <h2>Contact Us</h2>
+    <p>Email: support@athenoura.com</p>
+    <p>Instagram: @athenoura</p>
+  </section>  <footer>
+    &copy; 2025 Athenoura. All rights reserved.
+  </footer>  <script>
+    function switchTheme(theme) {
+      switch (theme) {
+        case 'athena-original':
+          document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--athena-original');
+          break;
+        case 'midnight-bliss':
+          document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--midnight-bliss');
+          break;
+        case 'solar-radiance':
+          document.body.style.background = getComputedStyle(document.documentElement).getPropertyValue('--solar-radiance');
+          break;
+      }
+    }
+  </script></body>
+</html>
